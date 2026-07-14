@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar AI Workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/DataX/assets/index-Db39haxD.js"></script>
+    <link rel="stylesheet" crossorigin href="/DataX/assets/index-BCWGrXGM.css">
+  </head>
+  <body>
+    <div id="authScreen" class="auth-screen">
+      <div class="login-card">
+        <div class="auth-header">
+          <div class="brand-mark">✦</div>
+          <div>
+            <p class="eyebrow">DataX sign in</p>
+            <h1>Welcome back</h1>
+          </div>
+        </div>
+        <p class="auth-copy">Sign in to continue your AI workspace session.</p>
+        <form id="loginForm" class="login-form">
+          <label for="loginUsername">Username</label>
+          <input id="loginUsername" type="text" autocomplete="username" required />
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" autocomplete="current-password" required />
+          <div id="loginError" class="login-error" aria-live="polite"></div>
+          <button type="submit" class="primary-btn">Sign in</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="appShell" class="app-shell hidden">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-mark">✦</div>
+          <div>
+            <p class="eyebrow">AI workspace</p>
+            <h1>Data X</h1>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <span id="userBadge" class="user-badge"></span>
+          <button id="newChatButton" class="secondary-btn" type="button">New chat</button>
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle color theme">☀️</button>
+          <button id="logoutButton" class="secondary-btn" type="button">Logout</button>
+          <div class="status-pill">Mocked workflow • dependable by design</div>
+        </div>
+      </header>
+
+      <main class="workspace-layout">
+        <section class="chat-panel">
+          <div class="chat-header">
+            <div>
+              <p class="eyebrow">Ask anything</p>
+              <h2>Start a conversation</h2>
+            </div>
+            <p class="chat-subtitle">Get a clean reply or a structured work card in the same conversation.</p>
+          </div>
+
+          <div id="conversationStream" class="conversation-stream">
+            <div id="thread" class="thread"></div>
+            <div id="detailCard" class="detail-card hidden"></div>
+          </div>
+
+          <div class="composer-card">
+            <div class="composer-heading">
+              <p class="eyebrow">Create with confidence</p>
+              <h2>What do you want to work on?</h2>
+              <p class="subcopy">
+                Ask for a concise reply or a structured work card that feels ready to review.
+              </p>
+            </div>
+
+            <form id="promptForm" class="prompt-form">
+              <label class="sr-only" for="promptInput">Prompt</label>
+              <textarea
+                id="promptInput"
+                rows="4"
+                maxlength="280"
+                placeholder="Try: “Draft a patient chart summary for today’s follow-up visit.”"
+              ></textarea>
+              <div class="form-actions">
+                <div class="helper-text">Responses are mocked for this demo.</div>
+                <button type="submit" class="primary-btn">Send</button>
+              </div>
+            </form>
+
+            <div class="example-pills" aria-label="Suggested prompts">
+              <button class="pill-btn" type="button" data-prompt="Draft a concise consultation note for a follow-up visit.">
+                Consultation note
+              </button>
+              <button class="pill-btn" type="button" data-prompt="Create a patient chart summary with today's key updates.">
+                Patient chart
+              </button>
+              <button class="pill-btn" type="button" data-prompt="Write a polished document brief for a new care initiative.">
+                Document brief
+              </button>
+              <button class="pill-btn" type="button" data-prompt="Perform a comprehensive deep analysis of the dataset using ML model optimization.">
+                ML analysis
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+  </body>
+</html>
